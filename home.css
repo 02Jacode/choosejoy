@@ -1,0 +1,100 @@
+*{
+     margin: 0;
+     padding: 0;
+     font-family: 'Berlin Sans FB Demi', sans-serif;
+                                                     
+}
+body{
+    min-height: 100vh;
+    background-color: aliceblue;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+nav{
+    background-color: rgb(251,220,92);
+    box-shadow: 0px 5px 1px rgb(243, 178, 0);
+}
+nav ul{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content:right;
+    align-items: center;
+}
+nav li{
+    height: 60px;
+}
+nav a{  
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    display: flex ;
+    align-items: center;
+    color: #00396b;
+
+}
+nav a:hover{
+    background-color: #f9e99b;
+}
+nav a:active{
+    background-color: rgb(252, 172, 0);
+}
+nav li:first-child{
+    margin-right: auto;
+}
+.sidebar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: #f5c904;
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.sidebar li{
+    width: 100%;
+}
+.sidebar a{
+    width: 100%;
+}
+.menu-button{
+    display: none;
+}
+@media(max-width:800px){
+    .hideOnMobile{
+        display: none;
+    }
+    .menu-button{
+        display: block;
+    }
+}
+@media(max-width:400px){
+    .sidebar{
+        width: 100%;
+    }
+}
+@media(max-width: 400px){
+    .container{
+        padding-left: 3rem !important;
+        padding-right: 3rem !important;
+    }
+}
+.container{
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: beige;
+
+}
+p{
+    text-align:justify;
+    font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+}

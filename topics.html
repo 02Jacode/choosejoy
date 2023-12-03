@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose Joy</title>
+    <link rel="stylesheet" href="home.css">
+    <style>
+        .containers{
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: beige;
+
+}
+.buttons{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 15px;
+}
+.buttons a{
+    color: black;
+    font-size: 30px;
+    padding: 30px;
+    text-decoration: none;
+}
+
+button{
+    background-color:  rgb(251,220,92);
+    border: none;
+    padding: 5%;
+    box-shadow: 5px 10px;
+}
+button:hover{
+    background-color: rgb(243, 178, 0);
+    border: none;
+    padding: 5%;
+    box-shadow: 5px 10px;
+    transition: all 0.4s ease-in-out;
+}
+button:active{
+    background-color:  #FF9130;
+    border: none;
+    padding: 7%;
+    box-shadow: 5px 10px;
+}
+@media screen and (max-width:  634px) {
+            .buttons {
+                font-size: 30px;
+                flex-direction: column;
+                display: grid;
+                transition: all 0.4s ease-in-out;
+            }
+        .containers{
+            width: 70vw;
+            padding: 15px;
+        }}
+
+    </style>
+</head>
+<body>
+    <nav>
+        <ul class="sidebar">
+            <li onclick="HideSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="25" viewBox="0 -960 960 960" width="26"fill="#763e04"><path d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z"/></svg></a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="topics.html">Topics</a></li>
+        </ul>
+        <ul>
+            <li><a href="index.html"><img src="logo.png" width="150px" height="60px"></a></li>
+            <li class="hideOnMobile"><a href="index.html">Home</a></li>
+            <li class="hideOnMobile"><a href="topics.html">Topics</a></li>
+            <li class="menu-button"  onclick="ShwSideBar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 -960 960 960" width="26" fill="#763e04"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+        </ul>
+    </nav>
+    <br><br><br>
+    <div class="containers">
+    <h1>Select Topics</h1>
+<hr>
+<br><br><br>
+<div class="buttons">
+<button><a href="#">400 Topics</a></button><br>
+<button><a href="">500 Topics</a></button>
+</div>
+
+
+</div>
+    <!--Javascripts-->
+     <script>
+        function ShwSideBar(){
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'flex'
+        }
+        function HideSidebar(){
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'none'
+        }
+    </script>
+</body>
+</html>

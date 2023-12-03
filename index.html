@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose Joy</title>
+    <link rel="stylesheet" href="home.css">
+
+    <style>
+        *{
+     margin: 0;
+     padding: 0;
+     
+}
+body{
+    min-height: 100vh;
+    background-color: aliceblue;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: 'Berlin Sans FB Demi', sans-serif;
+                                                     
+}
+nav{
+    background-color: rgb(251,220,92);
+    box-shadow: 0px 5px 1px rgb(243, 178, 0);
+}
+nav ul{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content:right;
+    align-items: center;
+}
+nav li{
+    height: 60px;
+}
+nav a{  
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    display: flex ;
+    align-items: center;
+    color: #00396b;
+
+}
+nav a:hover{
+    background-color: #f9e99b;
+}
+nav a:active{
+    background-color: rgb(252, 172, 0);
+}
+nav li:first-child{
+    margin-right: auto;
+}
+.sidebar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: #f5c904;
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.sidebar li{
+    width: 100%;
+}
+.sidebar a{
+    width: 100%;
+}
+.menu-button{
+    display: none;
+}
+@media(max-width:800px){
+    .hideOnMobile{
+        display: none;
+    }
+    .menu-button{
+        display: block;
+    }
+}
+@media screen and(max-width:500px){
+    .sidebar{
+        width: 100%;
+    }
+    .container{
+            width: 90%;
+    }
+    .float-right{
+        float: none;
+        margin: 0 auto 10px;
+        width: 100%;
+        display: block;
+
+    }
+}
+.container{
+    padding: 20px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: beige;
+
+}
+.clearfix::after{
+    content:"";
+    display: table;
+    clear: both;
+}
+.float-right{
+    float: right;
+    margin: 0 0 10px 10px; 
+    width: 31%;
+    max-width: 100%; 
+    height: auto; 
+    padding: 1%;
+}
+@media screen and(min-width: 501px) and (max-width: 800px){
+    .container{
+        width: 70%;
+    }
+}
+
+        </style>
+</head>
+<body>
+    <nav>
+        <ul class="sidebar">
+            <li onclick="HideSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="25" viewBox="0 -960 960 960" width="26"fill="#763e04"><path d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z"/></svg></a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="topics.html">Topics</a></li>
+        </ul>
+        <ul>
+            <li><a href="index.html"><img src="logo.png" width="150px" height="60px"></a></li>
+            <li class="hideOnMobile"><a href="index.html">Home</a></li>
+            <li class="hideOnMobile"><a href="topics.html">Topics</a></li>
+            <li class="menu-button"  onclick="ShwSideBar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 -960 960 960" width="26" fill="#763e04"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+        </ul>
+    </nav>
+    <br>
+
+<div class="container">
+    <h1>About Me</h1><br>
+<hr><br>
+    <div class="clearfix">
+        <img src="me.jpg" alt="Joy image" class="float-right">
+    <h3>Hi! I am Joy Cortes</h3>
+        <h4>Professionally, I thrive in [Your Industry or Field], where I [Briefly Describe Your Role or Expertise]. My journey in this dynamic landscape has equipped me with valuable insights and a knack for [Specific Skills or Achievements].</h4>
+    <p>Beyond the professional realm, I am a firm believer in the philosophy that life is a continuous learning adventure. Whether I'm immersed in a good book, tackling a DIY project, or exploring the outdoors, I embrace every opportunity to broaden my horizons.
+        This webpage serves as a canvas where I paint the portrait of my experiences, insights, and musings. Join me on this digital journey as I navigate the diverse facets of life, one pixel at a time. Feel free to reach out—I'm always eager to connect with like-minded individuals and share in the beauty of human connection.
+    </p>
+    </div>
+
+    <!--links-->
+    <div class="links">
+
+    </div>
+</div>
+    <!--Javascripts-->
+     <script>
+        function ShwSideBar(){
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'flex'
+        }
+        function HideSidebar(){
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'none'
+        }
+    </script>
+</body>
+</html>
