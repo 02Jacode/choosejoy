@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Choose Joy</title>
     <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <style>
 .container{
@@ -12,7 +13,7 @@
     margin: 0 auto;
     text-align: center;
     background-color: beige;
-
+    font-family: 'Berlin Sans FB Demi', sans-serif;
 }
 .clearfix::after{
     content:"";
@@ -27,21 +28,44 @@
     height: auto; 
     padding: 1%;
 }
-@media screen and(min-width: 501px) and (max-width: 800px){
-    .container{
-        width: 100%;
-    }
-    .float-right{
-        width: 100%;
-        float: none;
-        margin: 0 auto 10px;
-        display: block;
-    }
-    h4{
-        text-align: justify;
-    }
+
+@media screen and (max-width: 600px) {
+  .container {
+    width: 100%;
+  }
+  .float-right {
+    width: 100%;
+    float: none;
+    margin: 0 auto 10px;
+    display: block;
+  }
+  h2 {
+    text-align: left; /* Align h2 to the right */
+    padding: 0 3% 0 0;
+  }
+  h4 {
+    text-align: left; /* Align h4 to the right */
+    padding: 0 3% 0 0;
+  }
 }
 
+
+    .fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  color: black;
+  float: left;
+}
    </style>
 </head>
 <body>
@@ -71,11 +95,9 @@
         This webpage serves as a canvas where I paint the portrait of my experiences, insights, and musings. Join me on this digital journey as I navigate the diverse facets of life, one pixel at a time. Feel free to reach out—I'm always eager to connect with like-minded individuals and share in the beauty of human connection.
     </p>
     </div>
-
-    <!--links-->
     <div class="links">
-
-    </div>
+        <a href="#" class="fa fa-facebook"></a>
+</div>
 </div>
     <!--Javascripts-->
      <script>
