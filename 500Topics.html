@@ -369,6 +369,14 @@
   </div>
 
   <script>
+        function ShwSideBar(){
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'flex'
+        }
+        function HideSidebar(){
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'none'
+        }
     function toggleUnitOne() {
       var paragraph = document.getElementById("unitone");
       if (paragraph.style.display === "none" || paragraph.style.display === "") {
