@@ -13,6 +13,7 @@
   }
   
   nav {
+    max-width: 100%;
     background-color: rgb(251, 220, 92);
     box-shadow: 0px 5px 1px rgb(243, 178, 0);
   }
@@ -28,7 +29,6 @@
   nav li {
     height: 60px;
   }
-  
   nav a {
     height: 100%;
     padding: 0 15px; /* Adjusted padding for smaller screens */
@@ -77,25 +77,19 @@
   .menu-button {
     display: none;
   }
-  
-  @media (max-width: 800px) {
-    .hideOnMobile {
-      display: none;
+  @media(max-width:400px){
+    .hideOnMobile{
+        display: none;
     }
-    .menu-button {
-      display: block;
+    .menu-button{
+        display: block;
     }
-    nav a {
-      padding: 0 10px; /* Adjusted padding for smaller screens */
+}
+@media(max-width:400px){
+    .sidebar{
+        width: 100%;
     }
-  }
-  
-  @media (max-width: 600px) {
-    .sidebar {
-      width: 100%;
-    }
-  }
-  
+}
   .container {
     padding: 10px; /* Adjusted padding for smaller screens */
     max-width: 100%; /* Ensure container is 100% width on smaller screens */

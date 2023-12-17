@@ -8,64 +8,48 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <style>
-.container{
-    padding: 20px;
-    margin: 0 auto;
-    text-align: center;
-    background-color: beige;
-    font-family: 'Berlin Sans FB Demi', sans-serif;
-}
-.clearfix::after{
-    content:"";
-    display: table;
-    clear: both;
-}
-.float-right{
-    float: right;
-    margin:10px 10px; 
-    width: 35%;
-    max-width: 100%; 
-    height: auto; 
-    padding: 1%;
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
 }
 
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh; /* Adjust the height as needed */
+    padding: 5px; /* Adjust the padding as needed */
+    background-color: #f0f0f0; /* Container background color */
+}
+.box {
+    flex: 1;
+    padding: 5px; /* Adjust the padding as needed */
+    border: 1px solid #ccc; /* Box border */
+    background-color: #fff; /* Box background color */
+}
+.box img{
+    width: 70%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+.box p{
+    padding: 4.4rem;
+    text-align: justify;
+}
+h2{
+    padding: 1rem;
+}
 @media screen and (max-width: 600px) {
-  .container {
-    width: 100%;
-  }
-  .float-right {
-    width: 100%;
-    float: none;
-    margin: 0 auto 10px;
-    display: block;
-  }
-  h2 {
-    text-align: left; /* Align h2 to the right */
-    padding: 0 3% 0 0;
-  }
-  h4 {
-    text-align: left; /* Align h4 to the right */
-    padding: 0 3% 0 0;
-  }
+    .container {
+        display: grid;
+    }
+    .box p{
+    padding: 2rem;
+    text-align: justify;
+}
 }
 
-
-    .fa {
-  padding: 20px;
-  font-size: 30px;
-  width: 50px;
-  text-align: center;
-  text-decoration: none;
-}
-
-.fa:hover {
-    opacity: 0.7;
-}
-
-.fa-facebook {
-  color: black;
-  float: left;
-}
    </style>
 </head>
 <body>
@@ -83,20 +67,23 @@
         </ul>
     </nav>
     <br>
-
-<div class="container">
-    <h1>About Me</h1><br>
-<hr><br>
-    <div class="clearfix">
-        <img src="me.jpg" alt="Joy image" class="float-right">
-    <h2>Hi! I am Joy Cortes</h2>
-        <h4>Professionally, I thrive in [Your Industry or Field], where I [Briefly Describe Your Role or Expertise]. My journey in this dynamic landscape has equipped me with valuable insights and a knack for [Specific Skills or Achievements].</h4>
-    <p>Beyond the professional realm, I am a firm believer in the philosophy that life is a continuous learning adventure. Whether I'm immersed in a good book, tackling a DIY project, or exploring the outdoors, I embrace every opportunity to broaden my horizons.
-        This webpage serves as a canvas where I paint the portrait of my experiences, insights, and musings. Join me on this digital journey as I navigate the diverse facets of life, one pixel at a time. Feel free to reach out—I'm always eager to connect with like-minded individuals and share in the beauty of human connection.
-    </p>
+    <h2>About Me</h2>
+    <div class="container">
+        <div class="box">
+            <img src="me.jpg">
+        </div>
+        <div class="box">
+            <b><p>Hi! I am Joy Cortes</b> <br>I am a dedicated individual on a journey to becoming a licensed professional teacher. 
+                Passionate about the transformative power of education, I am currently immersed in the process of acquiring the skills and 
+                knowledge necessary to make a positive impact in the classroom. My approach to teaching combines a solid foundation of 
+                theoretical understanding with practical experiences, allowing me to create dynamic lesson plans and employ innovative 
+                teaching methods. Beyond the academic realm, I am committed to fostering a supportive and inclusive learning environment that
+                 encourages student growth and development. Eager to contribute to the field of education, I am actively engaged in ongoing 
+                 professional development to stay current with the latest trends and techniques. As I pursue my license in professional 
+                 teaching, my goal is to inspire and empower students, instilling in them a lifelong love for learning. I am excited about 
+                the opportunity to make a meaningful difference in the lives of my students and contribute to the advancement of education.</p>
+        </div>
     </div>
-    <div class="links">
-        <a href="#" class="fa fa-facebook"></a>
 </div>
 </div>
     <!--Javascripts-->
